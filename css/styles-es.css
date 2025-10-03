@@ -1,0 +1,586 @@
+/* ↓↓↓↓↓↓↓↓↓↓ Plantillas ↓↓↓↓↓↓↓↓↓↓ */
+/* ↑↑↑↑↑↑↑↑↑↑ Plantillas ↑↑↑↑↑↑↑↑↑↑ */
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ Recursos ↓↓↓↓↓↓↓↓↓↓ */
+
+@font-face {
+    font-family: "Genos";
+    src: url(../fonts/Genos-Light.ttf);
+}
+
+@font-face {
+    font-family: "Alien";
+    src: url(../fonts/Alien_S.ttf);
+}
+
+/* Font: Orbitron */
+
+/* ↑↑↑↑↑↑↑↑↑↑ Recursos ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ Estilos: generales ↓↓↓↓↓↓↓↓↓↓ */
+
+* {
+    overflow-x: hidden;
+    font-family: Genos;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+    background-image: url("../media/images/global/stars.png");
+    background-attachment: fixed;
+    background-size: cover;
+
+    padding-top: 200px;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    padding-top: 50px;
+}
+
+.con-tenedor {
+    position: relative;
+    background-color: #ffffff48;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0 15% 10px 15%;
+}
+
+@media (max-width: 1100px) {
+    .con-tenedor {
+        margin: 0 5% 10px 5%;
+    }
+}
+
+img, video {
+    width: 100px;
+    height: 100px;
+}
+
+h1, h2, h3, p, li, a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
+h1, h2, h3 {
+    font-family: Orbitron;
+    text-align: center;
+    font-size: 2em;
+}
+
+h2, h3 {
+    text-shadow: 0px 3px 3px black;
+    padding-bottom: 10px;
+}
+
+p, li {
+    font-size: 18px;
+    padding: 10px;
+}
+
+@media (max-width: 1100px) {
+    h3, p, li {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 3em;
+    }
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑ Estilos: generales ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ Estilos: texto ↓↓↓↓↓↓↓↓↓↓ */
+
+.negritaEspacial {
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.negrita {
+    font-weight: 600;
+}
+
+.hr-enjoyer {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.548);
+    margin-bottom: 35px;
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑ Estilos: texto ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ Estilos: menu de navegación ↓↓↓↓↓↓↓↓↓↓ */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    
+    width: 100%;
+    max-height: 180px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: #000000e1;
+    box-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+
+    padding: 10px 0;
+}
+
+header h1 {
+    color: black;
+    text-align: center;
+
+    letter-spacing: 20px;
+    word-spacing: 50px;
+    font-size: 2em;
+    text-shadow: 0px 2px 4px white;
+
+    margin: 0 0 10px 0;
+    transition: color 5s ease;
+}
+
+header:has(nav li:hover) h1 {
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    list-style: none;
+
+    padding: 10px;
+    margin: 0;
+}
+
+header li {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 180px;
+    height: auto;
+
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.623);
+
+    transition: box-shadow 1s ease;
+    transition: background-color 1s ease;
+}
+
+header li:hover {
+    box-shadow: 0px 0px 10px #000000;
+    background-color: #ffffff96;
+}
+
+header li:hover a {
+    color: #000000;
+    text-shadow: 0px 3px 3px white;
+}
+
+header a {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: color 1s ease;
+    transition: text-shadow 1s ease;
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑ Estilos: menu de navegación ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ Estilos: sección - identidad ↓↓↓↓↓↓↓↓↓↓ */
+
+#identidad {
+    position: relative;
+    overflow: hidden;
+}
+
+#identidad .identidad-contenido {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+#identidad .identidad-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#identidad video {
+    width: 90%;
+    height: auto;
+    max-width: 400px;
+    border: 1px solid #ffffff48;
+}
+
+#identidad p {
+    width: 60%;
+    padding-bottom: 50px;
+}
+
+#identidad h3 {
+    font-size: 1em;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#identidad ul {
+    width: 90%;
+    padding-bottom: 20px;
+}
+
+#identidad li {
+    margin: 0;
+    padding: 0;
+}
+
+#identidad li::before {
+    content: "✦";
+    padding-right: 5px;
+}
+
+@media (max-width: 1100px) {
+    #identidad .identidad-contenido {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #identidad .identidad-video {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    #identidad video {
+        width: 100%;
+        max-width: 500px;
+        margin: 10px auto;
+    }
+
+    #identidad p, 
+    #identidad li {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #identidad h3 {
+        font-size: 2em;
+        margin: 0;
+    }
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑ Estilos: sección - identidad ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ Estilos: sección - proyectos ↓↓↓↓↓↓↓↓↓↓ */
+
+#proyectos {
+    width: 100%;
+    position: relative;
+}
+
+#proyectos .con-tenedor div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#proyectos .con-tenedor article {
+    border: 1px solid #ffffff48;
+    background-color: #ffffff48;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px black;
+
+    padding: 8px;
+    padding-bottom: 25px;
+    margin: 10px;
+
+    transition: background-color 1s ease;
+}
+
+#proyectos .con-tenedor article:hover {
+    background-color: rgba(24, 24, 24, 0.801);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#proyectos img {
+    width: 100%;
+    height: 180px;
+    
+    box-shadow: inset 5px 5px 5px white;
+    border: 1px inset black;
+    
+    transition: all 1s ease;
+}
+
+#proyectos .con-tenedor article:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1100px) {
+    #proyectos .con-tenedor div {
+        display: block;
+    }
+
+    #proyectos .con-tenedor article {
+        width: 95%;
+        margin: auto auto;
+        margin-bottom: 50px;
+        
+        padding-bottom: 50px;
+    }
+
+    #proyectos img, #proyectos video {
+        height: 380px;
+    }
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑ Estilos: sección - proyectos ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ Estilos: sección - contacto ↓↓↓↓↓↓↓↓↓↓ */
+
+#contacto p {
+    width: 50%;
+}
+
+.contactos-cont {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.contactos-enlaces ul {
+    list-style: none;
+    width: 100%;
+}
+
+.contactos-enlaces li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+.contactos-enlaces li::before {
+    content: "✦";
+    margin-right: 5px;
+    transition: color 0.4s ease-out;
+    flex-shrink: 0;
+}
+
+.contactos-enlaces li:hover::before {
+    color: #000000;
+}
+
+.contactos-enlaces a {
+    display: inline;
+    display: block;
+    color: white;
+}
+
+.contactos-imagenes {
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+
+    width: 300px;
+    height: 180px;
+
+    overflow: hidden;
+    background-color: #ffffff48;
+    border: 1px solid #ffffff48;
+    border-radius: 10px;
+}
+
+.contactos-imagenes img {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+.contactos-placeholder {
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-align: center;
+    z-index: 1;
+    padding: 10px;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Efectos de hover para mostrar imágenes */
+/* El pseudo :has hace que el selector apunte "si" pasa (x), como un if  */
+.contactos-cont:has(.contactos-enlaces li:nth-child(1) a:hover) .contactos-imagenes #contactos-imagenes-1 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.contactos-cont:has(.contactos-enlaces li:nth-child(2) a:hover) .contactos-imagenes #contactos-imagenes-2 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.contactos-cont:has(.contactos-enlaces li:nth-child(3) a:hover) .contactos-imagenes #contactos-imagenes-3 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.contactos-cont:has(.contactos-enlaces li:nth-child(4) a:hover) .contactos-imagenes #contactos-imagenes-4 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Ocultar placeholder cuando hay hover */
+.contactos-cont:has(.contactos-enlaces a:hover) .contactos-placeholder {
+    opacity: 0;
+}
+
+@media (max-width: 1100px) {
+    .contactos-cont {
+        grid-template-columns: 1fr;
+    }
+
+    .contactos-imagenes {
+        width: 70%;
+        height: 280px;
+    }
+
+    .contactos-enlaces ul {
+        margin-bottom: 20px;
+    }
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑ Estilos: sección - contacto ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ Estilos: sección - lateral ↓↓↓↓↓↓↓↓↓↓ */
+
+aside {
+    position: fixed;
+    bottom: 5%;
+    left: 1%;
+    z-index: 1000;
+}
+
+aside div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+aside a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+aside div > a:last-child img {
+    transform: scale(0.9);
+}
+
+aside a img:hover {
+    transform: scale(0.85);
+    cursor: pointer;
+}
+
+aside div > a:last-child img:hover {
+    transform: scale(0.75);
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑ Estilos: sección - lateral ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ Estilos: sección - footer ↓↓↓↓↓↓↓↓↓↓ */
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 5px;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+footer > p:last-child {
+    padding-bottom: 10px;
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑ Estilos: sección - footer ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ bla bla bla ↓↓↓↓↓↓↓↓↓↓ */
+/* ↑↑↑↑↑↑↑↑↑↑ bla bla bla ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ bla bla bla ↓↓↓↓↓↓↓↓↓↓ */
+/* ↑↑↑↑↑↑↑↑↑↑ bla bla bla ↑↑↑↑↑↑↑↑↑↑ */
